@@ -119,33 +119,6 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/life/games/index.html</loc>
-    
-    <lastmod>2024-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.thir0th.xyz/life/music/index.html</loc>
-    
-    <lastmod>2024-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.thir0th.xyz/life/movies/index.html</loc>
-    
-    <lastmod>2024-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.thir0th.xyz/personal/about/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
@@ -164,6 +137,33 @@
   </url>
   
   <url>
+    <loc>https://www.thir0th.xyz/life/games/index.html</loc>
+    
+    <lastmod>2024-05-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thir0th.xyz/life/movies/index.html</loc>
+    
+    <lastmod>2024-05-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thir0th.xyz/life/music/index.html</loc>
+    
+    <lastmod>2024-05-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.thir0th.xyz/site/census/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/social/fcircle/index.html</loc>
+    <loc>https://www.thir0th.xyz/site/time/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/site/time/index.html</loc>
+    <loc>https://www.thir0th.xyz/social/fcircle/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -225,13 +225,6 @@
 
   
   <url>
-    <loc>https://www.thir0th.xyz/categories/canary/</loc>
-    <lastmod>2025-04-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.thir0th.xyz/categories/chunk/</loc>
     <lastmod>2025-04-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -240,6 +233,13 @@
   
   <url>
     <loc>https://www.thir0th.xyz/categories/Writeup/</loc>
+    <lastmod>2025-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thir0th.xyz/categories/canary/</loc>
     <lastmod>2025-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
