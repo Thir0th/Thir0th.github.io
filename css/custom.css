@@ -1,170 +1,70 @@
-/* 页脚与头图透明 */
-#footer {
-  background: transparent !important;
-}
+/* ========================
+   Butterfly 页脚美化增强版
+   主题：高级透明 + 动画 + 夜间星空 + 动态边框 + 自定义模块美化
+   By ChatGPT
+======================== */
+
+/* ======= 透明背景 + 磨砂玻璃效果 ======= */
+#footer,
 #page-header {
-  background: transparent !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* 白天模式遮罩透明 */
-#footer::before {
-  background: transparent !important;
-}
-#page-header::before {
-  background: transparent !important;
+[data-theme="dark"] #footer,
+[data-theme="dark"] #page-header {
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
-/* 夜间模式遮罩透明 */
-[data-theme="dark"] #footer::before {
-  background: transparent !important;
-}
+#footer::before,
+#page-header::before,
+[data-theme="dark"] #footer::before,
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
 }
 
-/* 日间模式不生效 */
-[data-theme="light"] #site-name,
-[data-theme="light"] #site-title,
-[data-theme="light"] #site-subtitle,
-[data-theme="light"] #post-info {
-  animation: none;
+/* ======= 动态发光描边动画 ======= */
+#footer-wrap {
+  padding: 20px;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #11ee5e, #5636ed, #ed709b) 1;
+  animation: borderMove 5s linear infinite;
+  border-radius: 20px;
 }
-/* 夜间模式生效 */
-[data-theme="dark"] #site-name,
-[data-theme="dark"] #site-title {
-  animation: light_15px 10s linear infinite;
-}
-[data-theme="dark"] #site-subtitle {
-  animation: light_10px 10s linear infinite;
-}
-[data-theme="dark"] #post-info {
-  animation: light_5px 10s linear infinite;
-}
-/* 关键帧描述 */
-@keyframes light_15px {
+
+@keyframes borderMove {
   0% {
-    text-shadow: #5636ed 0 0 15px;
-  }
-  12.5% {
-    text-shadow: #11ee5e 0 0 15px;
-  }
-  25% {
-    text-shadow: #f14747 0 0 15px;
-  }
-  37.5% {
-    text-shadow: #f1a247 0 0 15px;
-  }
-  50% {
-    text-shadow: #f1ee47 0 0 15px;
-  }
-  50% {
-    text-shadow: #b347f1 0 0 15px;
-  }
-  62.5% {
-    text-shadow: #002afa 0 0 15px;
-  }
-  75% {
-    text-shadow: #ed709b 0 0 15px;
-  }
-  87.5% {
-    text-shadow: #39c5bb 0 0 15px;
+    border-image-source: linear-gradient(0deg, #11ee5e, #5636ed, #ed709b);
   }
   100% {
-    text-shadow: #5636ed 0 0 15px;
+    border-image-source: linear-gradient(360deg, #11ee5e, #5636ed, #ed709b);
   }
 }
 
-@keyframes light_10px {
-  0% {
-    text-shadow: #5636ed 0 0 10px;
-  }
-  12.5% {
-    text-shadow: #11ee5e 0 0 10px;
-  }
-  25% {
-    text-shadow: #f14747 0 0 10px;
-  }
-  37.5% {
-    text-shadow: #f1a247 0 0 10px;
-  }
-  50% {
-    text-shadow: #f1ee47 0 0 10px;
-  }
-  50% {
-    text-shadow: #b347f1 0 0 10px;
-  }
-  62.5% {
-    text-shadow: #002afa 0 0 10px;
-  }
-  75% {
-    text-shadow: #ed709b 0 0 10px;
-  }
-  87.5% {
-    text-shadow: #39c5bb 0 0 10px;
-  }
-  100% {
-    text-shadow: #5636ed 0 0 10px;
-  }
+/* ======= 夜间星空背景（可选） ======= */
+[data-theme="dark"] #footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url('https://cdn.jsdelivr.net/gh/yourcdn/stars.gif') repeat;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
-@keyframes light_5px {
-  0% {
-    text-shadow: #5636ed 0 0 5px;
-  }
-  12.5% {
-    text-shadow: #11ee5e 0 0 5px;
-  }
-  25% {
-    text-shadow: #f14747 0 0 5px;
-  }
-  37.5% {
-    text-shadow: #f1a247 0 0 15px;
-  }
-  50% {
-    text-shadow: #f1ee47 0 0 5px;
-  }
-  50% {
-    text-shadow: #b347f1 0 0 5px;
-  }
-  62.5% {
-    text-shadow: #002afa 0 0 5px;
-  }
-  75% {
-    text-shadow: #ed709b 0 0 5px;
-  }
-  87.5% {
-    text-shadow: #39c5bb 0 0 5px;
-  }
-  100% {
-    text-shadow: #5636ed 0 0 5px;
-  }
-}
-
-
-
-
-/* 白天模式适配 */
-[data-theme="light"] #aside-content > .card-widget.card-info {
-  background-image: url(https://s2.loli.net/2023/11/10/qfrzaFc8CbWgYwL.png);
-  background-repeat: no-repeat;
-  background-attachment: inherit;
-  background-size: 100%;
-}
-/* 黑夜模式适配 */
-[data-theme="dark"] #aside-content > .card-widget.card-info {
-  background-image: url(https://s2.loli.net/2023/11/10/PRAGrqkZlEt5SKh.jpg);
-  background-repeat: no-repeat;
-  background-attachment: inherit;
-  background-size: 100%;
-}
-
-/* 个人信息Follow me按钮 */
+/* ======= Follow Me 按钮样式 ======= */
 #aside-content > .card-widget.card-info > #card-info-btn {
   background-color: #3eb8be;
   border-radius: 8px;
+  transition: all 0.3s ease;
+}
+#aside-content > .card-widget.card-info > #card-info-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--theme-color);
 }
 
-/* 欢迎信息 */
+/* ======= 欢迎信息美化 ======= */
 #welcome-info {
   background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
   border-radius: 18px;
@@ -174,3 +74,93 @@
   background: #212121;
 }
 
+/* ======= 页脚心跳动画 ======= */
+#heartbeat {
+  color: red;
+  animation: iconAnimate 1s ease-in-out infinite;
+}
+@keyframes iconAnimate {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(0.9); }
+  20%, 40%, 60%, 80% { transform: scale(1.1); }
+  50%, 70% { transform: scale(1.1); }
+}
+
+/* ======= 社交图标 hover 效果 ======= */
+.ft-item-2 .ft-img-group .img-group-item a img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ft-item-2 .ft-img-group .img-group-item a img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 0 12px var(--theme-color);
+  border: 2px solid var(--theme-color);
+}
+
+/* ======= 自定义模块：格言区域美化 ======= */
+.ft-item-1 .t-top .t-t-l .bg-ad {
+  background: rgba(255, 255, 255, 0.07);
+  border-left: 4px solid #3eb8be;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-style: italic;
+  color: #444;
+  position: relative;
+}
+[data-theme="dark"] .ft-item-1 .t-top .t-t-l .bg-ad {
+  background: rgba(255, 255, 255, 0.03);
+  color: #ddd;
+}
+
+.ft-item-1 .t-top .t-t-l .bg-ad::before {
+  content: '✨「再看看那个光点」';
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 8px;
+  color: #3eb8be;
+}
+
+.ft-item-1 .t-top .t-t-l .bg-ad div {
+  font-size: 0.95em;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.ft-item-1 .t-top .t-t-l .bg-ad div::after {
+  content: '这里，是家园。你爱的人、讨厌的人、曾经的对手与朋友，全都在这个蓝色像素点上摸爬滚打、爆肝生活。宇宙冷酷，他们搞笑。';
+  display: block;
+  margin-top: 6px;
+  opacity: 0.85;
+}
+
+/* ======= 自定义模块：猜你想看列表美化 ======= */
+.t-t-r ul.ft-links li a {
+  display: inline-block;
+  margin: 4px 8px 4px 0;
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.t-t-r ul.ft-links li a:hover {
+  background: var(--theme-color);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* 响应式支持优化 */
+@media screen and (max-width: 768px) {
+  .ft-item-1, .ft-item-2 { flex-basis: 100% !important; }
+}
+@media screen and (max-width: 576px) {
+  .t-top { flex-wrap: wrap; }
+  .t-top .t-t-l, .t-top .t-t-r {
+    flex-basis: 100% !important;
+    margin-top: 16px;
+  }
+  .t-t-r ul.ft-links li a {
+    display: block;
+    margin: 6px 0;
+  }
+}

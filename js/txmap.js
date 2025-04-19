@@ -1,9 +1,9 @@
-//get����
+//get请求
 $.ajax({
     type: 'get',
     url: 'https://apis.map.qq.com/ws/location/v1/ip',
     data: {
-        key: 'JVVBZ-SVR6T-N3NX5-L5B7P-D4MAH-JGFRX',
+        key: 'LZGBZ-FF66V-MREPJ-5VB7L-GSX5J-OLFML',
         output: 'jsonp',
     },
     dataType: 'jsonp',
@@ -29,197 +29,197 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-    let dist = getDistance(39.146989,122.090512, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //���ﻻ���Լ��ľ�γ��
+    let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
     let pos = ipLoacation.result.ad_info.nation;
     let ip;
     let posdesc;
-    //���ݹ��ҡ�ʡ�ݡ�������Ϣ�Զ��延ӭ��
+    //根据国家、省份、城市信息自定义欢迎语
     switch (ipLoacation.result.ad_info.nation) {
-        case "�ձ�":
-            posdesc = "���������һ��ȥ��ӣ����";
+        case "日本":
+            posdesc = "よろしく，一起去看樱花吗";
             break;
-        case "����":
+        case "美国":
             posdesc = "Let us live in peace!";
             break;
-        case "Ӣ��":
-            posdesc = "��ͬ��һ��ҹ���׶���";
+        case "英国":
+            posdesc = "想同你一起夜乘伦敦眼";
             break;
-        case "����˹":
-            posdesc = "������ƿ���ؼӣ�";
+        case "俄罗斯":
+            posdesc = "干了这瓶伏特加！";
             break;
-        case "����":
+        case "法国":
             posdesc = "C'est La Vie";
             break;
-        case "�¹�":
+        case "德国":
             posdesc = "Die Zeit verging im Fluge.";
             break;
-        case "�Ĵ�����":
-            posdesc = "һ��ȥ�󱤽��ɣ�";
+        case "澳大利亚":
+            posdesc = "一起去大堡礁吧！";
             break;
-        case "���ô�":
-            posdesc = "ʰ��һƬ��Ҷ������";
+        case "加拿大":
+            posdesc = "拾起一片枫叶赠予你";
             break;
-        case "�й�":
+        case "中国":
             pos = ipLoacation.result.ad_info.province + " " + ipLoacation.result.ad_info.city + " " + ipLoacation.result.ad_info.district;
             ip = ipLoacation.result.ip;
             switch (ipLoacation.result.ad_info.province) {
-                case "������":
-                    posdesc = "��������������ӭ��~~~";
+                case "北京市":
+                    posdesc = "北——京——欢迎你~~~";
                     break;
-                case "�����":
-                    posdesc = "���������ɡ�";
+                case "天津市":
+                    posdesc = "讲段相声吧。";
                     break;
-                case "�ӱ�ʡ":
-                    posdesc = "ɽ��ΡΡ�ɱ��ݣ������۹ء���������ɴ������޽�ɽ��";
+                case "河北省":
+                    posdesc = "山势巍巍成壁垒，天下雄关。铁马金戈由此向，无限江山。";
                     break;
-                case "ɽ��ʡ":
-                    posdesc = "չ�����߳����ߣ���ռɽ������ࡣ";
+                case "山西省":
+                    posdesc = "展开坐具长三尺，已占山河五百余。";
                     break;
-                case "���ɹ�������":
-                    posdesc = "��Բԣ�Ұãã���紵�ݵͼ�ţ��";
+                case "内蒙古自治区":
+                    posdesc = "天苍苍，野茫茫，风吹草低见牛羊。";
                     break;
-                case "����ʡ":
-                    posdesc = "����Կ����ܣ�";
+                case "辽宁省":
+                    posdesc = "我想吃烤鸡架！";
                     break;
-                case "����ʡ":
-                    posdesc = "״Ԫ����Ƕ����տ�֮����";
+                case "吉林省":
+                    posdesc = "状元阁就是东北烧烤之王。";
                     break;
-                case "������ʡ":
-                    posdesc = "��ϲ�����������Ժ��";
+                case "黑龙江省":
+                    posdesc = "很喜欢哈尔滨大剧院。";
                     break;
-                case "�Ϻ���":
-                    posdesc = "������֪���й�ֻ���������С�";
+                case "上海市":
+                    posdesc = "众所周知，中国只有两个城市。";
                     break;
-                case "����ʡ":
+                case "江苏省":
                     switch (ipLoacation.result.ad_info.city) {
-                        case "�Ͼ���":
-                            posdesc = "������ͦ��ȥ�ĳ�������";
+                        case "南京市":
+                            posdesc = "这是我挺想去的城市啦。";
                             break;
-                        case "������":
-                            posdesc = "�������ã������պ���";
+                        case "苏州市":
+                            posdesc = "上有天堂，下有苏杭。";
                             break;
                         default:
-                            posdesc = "ɢװ�Ǳ���Ҫɢװ�ġ�";
+                            posdesc = "散装是必须要散装的。";
                             break;
                     }
                     break;
-                case "�㽭ʡ":
-                    posdesc = "���罥�������������ѻ���δ�Ϲ顣";
+                case "浙江省":
+                    posdesc = "东风渐绿西湖柳，雁已还人未南归。";
                     break;
-                case "����ʡ":
+                case "河南省":
                     switch (ipLoacation.result.ad_info.city) {
-                        case "֣����":
-                            posdesc = "ԥ��֮�����֮�С�";
+                        case "郑州市":
+                            posdesc = "豫州之域，天地之中。";
                             break;
-                        case "������":
-                            posdesc = "�������£��������������������Ǳ�������";
+                        case "南阳市":
+                            posdesc = "臣本布衣，躬耕于南阳。此南阳非彼南阳！";
                             break;
-                        case "פ������":
-                            posdesc = "�������ʯ��ʯʯЮ���������ɽ�Ļ�����Ŷ��";
+                        case "驻马店市":
+                            posdesc = "峰峰有奇石，石石挟仙气。嵖岈山的花很美哦！";
                             break;
-                        case "������":
-                            posdesc = "�������������졣";
+                        case "开封市":
+                            posdesc = "刚正不阿包青天。";
                             break;
-                        case "������":
-                            posdesc = "����ĵ�������¡�";
+                        case "洛阳市":
+                            posdesc = "洛阳牡丹甲天下。";
                             break;
                         default:
-                            posdesc = "�ɷ����Ʒ�����ϻ�������";
+                            posdesc = "可否带我品尝河南烩面啦？";
                             break;
                     }
                     break;
-                case "����ʡ":
-                    posdesc = "����ס�ˣ��ߺ���ɡ�";
+                case "安徽省":
+                    posdesc = "蚌埠住了，芜湖起飞。";
                     break;
-                case "����ʡ":
-                    posdesc = "���ذ��Ƽ䣬�ҳ�Զ��ɽ��";
+                case "福建省":
+                    posdesc = "井邑白云间，岩城远带山。";
                     break;
-                case "����ʡ":
-                    posdesc = "��ϼ�������ɣ���ˮ������һɫ��";
+                case "江西省":
+                    posdesc = "落霞与孤鹜齐飞，秋水共长天一色。";
                     break;
-                case "ɽ��ʡ":
-                    posdesc = "ң�����ݾŵ��̣�һ����ˮ����к��";
+                case "山东省":
+                    posdesc = "遥望齐州九点烟，一泓海水杯中泻。";
                     break;
-                case "����ʡ":
-                    posdesc = "�����ȸ��棡";
+                case "湖北省":
+                    posdesc = "来碗热干面！";
                     break;
-                case "����ʡ":
-                    posdesc = "74751����ɳ˹���ˡ�";
+                case "湖南省":
+                    posdesc = "74751，长沙斯塔克。";
                     break;
-                case "�㶫ʡ":
-                    posdesc = "�ϰ������︣���ˡ�";
+                case "广东省":
+                    posdesc = "老板来两斤福建人。";
                     break;
-                case "����׳��������":
-                    posdesc = "����ɽˮ�����¡�";
+                case "广西壮族自治区":
+                    posdesc = "桂林山水甲天下。";
                     break;
-                case "����ʡ":
-                    posdesc = "�����ճ�����ˣ�Ϧ��������ϼ�⡣";
+                case "海南省":
+                    posdesc = "朝观日出逐白浪，夕看云起收霞光。";
                     break;
-                case "�Ĵ�ʡ":
-                    posdesc = "���������ӡ�";
+                case "四川省":
+                    posdesc = "康康川妹子。";
                     break;
-                case "����ʡ":
-                    posdesc = "ę́��ѧ��������200��";
+                case "贵州省":
+                    posdesc = "茅台，学生，再塞200。";
                     break;
-                case "����ʡ":
-                    posdesc = "���������Ʋ��ƣ��������ֱ���졣";
+                case "云南省":
+                    posdesc = "玉龙飞舞云缠绕，万仞冰川直耸天。";
                     break;
-                case "����������":
-                    posdesc = "����ãã��ԭ�ϣ��������졣";
+                case "西藏自治区":
+                    posdesc = "躺在茫茫草原上，仰望蓝天。";
                     break;
-                case "����ʡ":
-                    posdesc = "������������ɡ�";
+                case "陕西省":
+                    posdesc = "来份臊子面加馍。";
                     break;
-                case "����ʡ":
-                    posdesc = "Ǽ�Ѻ���Թ���������粻�����Źء�";
+                case "甘肃省":
+                    posdesc = "羌笛何须怨杨柳，春风不度玉门关。";
                     break;
-                case "�ຣʡ":
-                    posdesc = "ţ��ɺ������̶��úóԡ�";
+                case "青海省":
+                    posdesc = "牛肉干和老酸奶都好好吃。";
                     break;
-                case "���Ļ���������":
-                    posdesc = "��Į����ֱ����������Բ��";
+                case "宁夏回族自治区":
+                    posdesc = "大漠孤烟直，长河落日圆。";
                     break;
-                case "�½�ά���������":
-                    posdesc = "����ŵ�˿��·�����������ƺ��硣";
+                case "新疆维吾尔自治区":
+                    posdesc = "驼铃古道丝绸路，胡马犹闻唐汉风。";
                     break;
-                case "̨��ʡ":
-                    posdesc = "������ͷ����½����ͷ��";
+                case "台湾省":
+                    posdesc = "我在这头，大陆在那头。";
                     break;
-                case "����ر�������":
-                    posdesc = "�������в����ع�����ӭ���������";
+                case "香港特别行政区":
+                    posdesc = "永定贼有残留地鬼嚎，迎击光非岁玉。";
                     break;
-                case "�����ر�������":
-                    posdesc = "�Ըкɹ٣����߷��ơ�";
+                case "澳门特别行政区":
+                    posdesc = "性感荷官，在线发牌。";
                     break;
                 default:
-                    posdesc = "����ȥ��ĳ��й��ɣ�";
+                    posdesc = "带我去你的城市逛逛吧！";
                     break;
             }
             break;
         default:
-            posdesc = "����ȥ��Ĺ��ҹ��ɡ�";
+            posdesc = "带我去你的国家逛逛吧。";
             break;
     }
 
-    //���ݱ���ʱ���л���ӭ��
+    //根据本地时间切换欢迎语
     let timeChange;
     let date = new Date();
-    if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span>�����</span>��һ��֮�����ڳ���";
-    else if (date.getHours() >= 11 && date.getHours() < 13) timeChange = "<span>�����</span>����������緹�ˡ�";
-    else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<span>�����</span>��������˯������ɣ�";
-    else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<span>���㼸��</span>��һ������ѽ��";
-    else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>Ϧ�����޺ã�</span>";
-    else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>���Ϻ�</span>��ҹ������������";
-    else timeChange = "ҹ���ˣ������Ϣ���ٰ�ҹ��";
+    if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span>上午好</span>，一日之计在于晨！";
+    else if (date.getHours() >= 11 && date.getHours() < 13) timeChange = "<span>中午好</span>，该摸鱼吃午饭了。";
+    else if (date.getHours() >= 13 && date.getHours() < 15) timeChange = "<span>下午好</span>，懒懒地睡个午觉吧！";
+    else if (date.getHours() >= 15 && date.getHours() < 16) timeChange = "<span>三点几啦</span>，一起饮茶呀！";
+    else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>夕阳无限好！</span>";
+    else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好</span>，夜生活嗨起来！";
+    else timeChange = "夜深了，早点休息，少熬夜。";
 
     try {
-        //�Զ����ı�����Ҫ�ŵ�λ��
+        //自定义文本和需要放的位置
         document.getElementById("welcome-info").innerHTML =
-            `<b><center>?? ��ӭ��Ϣ ??</center>&emsp;&emsp;��ӭ���� <span style="color:var(--theme-color)">${pos}</span> ��С��飬${timeChange}�����ھ���վ��Լ <span style="color:var(--theme-color)">${dist}</span> �����ǰ��IP��ַΪ�� <span style="color:var(--theme-color)">${ip}</span>�� ${posdesc}</b>`;
+            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
     } catch (err) {
-        // console.log("Pjax�޷���ȡ#welcome-infoԪ��??????")
+        // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
 }
 window.onload = showWelcome;
-// ���ʹ����pjax�ڼ����������д���
+// 如果使用了pjax在加上下面这行代码
 document.addEventListener('pjax:complete', showWelcome);

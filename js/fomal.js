@@ -54,7 +54,7 @@ function tonav() {
     position = scroll;
   });
   //修复没有弄右键菜单的童鞋无法回顶部的问题
-  document.getElementById("page-name").innerText = document.title.split(" | bananaships🥝")[0];
+  document.getElementById("page-name").innerText = document.title.split(" | Thir0th🥝")[0];
 }
 
 function scrollToTop() {
@@ -73,7 +73,7 @@ $.ajax({
   type: 'get',
   url: 'https://apis.map.qq.com/ws/location/v1/ip',
   data: {
-    key: '22MBZ-S6MCT-XEUXH-VH2AD-47DBF-GMBVS',  // 这里要写你的KEY!!!
+    key: 'LZGBZ-FF66V-MREPJ-5VB7L-GSX5J-OLFML',  // 这里要写你的KEY!!!
     output: 'jsonp',
   },
   dataType: 'jsonp',
@@ -99,7 +99,7 @@ function getDistance(e1, n1, e2, n2) {
 
 function showWelcome() {
 
-  let dist = getDistance(121.987741,39.090492, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+  let dist = getDistance(114.356186, 36.07192, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
   let pos = ipLoacation.result.ad_info.nation;
   let ip;
   let posdesc;
@@ -285,7 +285,7 @@ function showWelcome() {
   try {
     //自定义文本和需要放的位置
     document.getElementById("welcome-info").innerHTML =
-      `<b><center style="font-size:25px;">🎉 无线电讯息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color); font-size:20px">${pos}</span> 的小伙伴，${timeChange}您现在距离 bananaships 约 <span style="color:var(--theme-color); font-size:20px">${dist}</span> 公里。<br><span style="color:var(--blue-custom); font-size:20px">${posdesc}</span></b>`; 
+      `<b><center style="font-size:25px;">🎉 无线电讯息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color); font-size:20px">${pos}</span> 的小伙伴，${timeChange}您现在距离 Thir0th 约 <span style="color:var(--theme-color); font-size:20px">${dist}</span> 公里。<br><span style="color:var(--blue-custom); font-size:20px">${posdesc}</span></b>`; 
   } catch (err) {
      //console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
   }
@@ -1119,7 +1119,7 @@ function createtime1() {
   var dnum = Math.floor(days);
 
   var ascll = [
-    `欢迎来到bananaships🥝の小家!`,
+    `欢迎来到Thir0th🥝の小家!`,
     `Future is now 🍭🍭🍭`,
     `
 ########   #######  ########     ###    ##    ## ##      ## 
@@ -1133,7 +1133,7 @@ function createtime1() {
     "小站已经苟活",
     dnum,
     "天啦!",
-    "©2024 By bananaships",
+    "©2024 By Thir0th",
   ];
 
   setTimeout(
@@ -1172,7 +1172,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by bananaships🥝 %c 你正在访问bananaships🥝の小家",
+      "%c ⚡ Powered by Thir0th🥝 %c 你正在访问Thir0th🥝の小家",
       "color:white; background-color:#f0ad4e",
       ""
     )
@@ -1282,8 +1282,8 @@ function share_() {
   try {
     // 截取标题
     var title = document.title;
-    var subTitle = title.endsWith("| bananaships🥝") ? title.substring(0, title.length - 14) : title;
-    navigator.clipboard.writeText('bananaships🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    var subTitle = title.endsWith("| Thir0th🥝") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('Thir0th🥝的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
     new Vue({
       data: function () {
         this.$notify({
