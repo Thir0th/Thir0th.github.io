@@ -101,24 +101,6 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/box/animation/index.html</loc>
-    
-    <lastmod>2024-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.thir0th.xyz/box/gallery/index.html</loc>
-    
-    <lastmod>2024-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.thir0th.xyz/life/games/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
@@ -146,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/site/census/index.html</loc>
+    <loc>https://www.thir0th.xyz/box/animation/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -155,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/site/time/index.html</loc>
+    <loc>https://www.thir0th.xyz/box/gallery/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -174,6 +156,24 @@
   
   <url>
     <loc>https://www.thir0th.xyz/personal/love/index.html</loc>
+    
+    <lastmod>2024-05-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thir0th.xyz/site/census/index.html</loc>
+    
+    <lastmod>2024-05-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thir0th.xyz/site/time/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
