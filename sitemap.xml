@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.thir0th.xyz/posts/9c6e1151.html</loc>
+    
+    <lastmod>2025-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thir0th.xyz/posts/193fa7da.html</loc>
+    
+    <lastmod>2025-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.thir0th.xyz/posts/1b9e3ed2.html</loc>
     
     <lastmod>2025-05-07</lastmod>
@@ -83,15 +101,6 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/posts/193fa7da.html</loc>
-    
-    <lastmod>2025-04-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.thir0th.xyz/posts/cb11c07b.html</loc>
     
     <lastmod>2025-04-20</lastmod>
@@ -155,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/box/animation/index.html</loc>
+    <loc>https://www.thir0th.xyz/box/gallery/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -164,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/box/gallery/index.html</loc>
+    <loc>https://www.thir0th.xyz/box/animation/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -191,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/personal/about/index.html</loc>
+    <loc>https://www.thir0th.xyz/life/music/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -200,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://www.thir0th.xyz/life/music/index.html</loc>
+    <loc>https://www.thir0th.xyz/personal/about/index.html</loc>
     
     <lastmod>2024-05-12</lastmod>
     
@@ -276,6 +285,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://www.thir0th.xyz/tags/Android/</loc>
+    <lastmod>2025-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -308,6 +324,13 @@
   
   <url>
     <loc>https://www.thir0th.xyz/categories/Magic/</loc>
+    <lastmod>2025-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.thir0th.xyz/categories/App/</loc>
     <lastmod>2025-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
